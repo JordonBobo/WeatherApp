@@ -43,7 +43,7 @@ function openWeatherCurrent() {
 }
 
 
-$(document).ready(openWeatherCurrent())
+$(document).ready(openWeatherCurrent)
 $("#mainSearch").click(openWeatherCurrent2);
 
 
