@@ -23,13 +23,122 @@
     <title>Is it Raining?</title>
   </head>
 
-  <body>
-    <header id="header"></header>
-    <div id="display1"></div>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary container header">
+        <a class="navbar-brand title">Is it raining?</a>
+        <form class="form-inline my-2 my-sm-2">
+            <input class="form-control mr-sm-2" type="text" id="userInput" placeholder="Search by City">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="mainSearch" type="button">Search</button>
+        </form>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Most recent search: <p id="savedSearch"></p> <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item dropdown show">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coming Soon</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">Imperial</a>
+                    <a class="dropdown-item" href="#">Metric</a>
+                    <a class="dropdown-item" href="#">Scientific</a>
+                </div>
+            </li> -->
+        </ul>
+    </nav>
+    
+    <!-- <button id="button">test</button> -->
+    
+    
+  <content class="row displays">
 
 
+    <div id="display1" class="col-sm-5">
+        <h3 id="city"></h3>
+        <div id="currentDay">
+          <p id="date"></p>
+          <img src="" alt="icon of current wearther condition" width="45%" id="icon">
+          <p id="weather"></p>
+          <p id="temp"></p>
+          <p id="humidity"></p>
+          <p id="wind"> </p>
+          <p id="uv" class=""> </p>
+        </div>
+      </div>
+      
+      
+      
+      <div id="display2" class="col-sm-5">
+        <h3>5-Day Forecast</h3>
+        
+        <div id="day1" class="container">
+          <p class="row">
+            <span id="date1"></span>
+            <img src="" alt="icon of current wearther condition" width="15%" id="icon1">
+            <span id="weather1"></span><br>
+          </p>
+          <p class="row">
+            <span id="temp1"> </span>
+            <span id="humidity1"> </span>
+          </p>
+        </div>
+        
+        <div id="day2" class="container">
+          <p class="row">
+            <span id="date2"></span>
+            <img src="" alt="icon of current wearther condition" width="15%" id="icon2">
+            <span id="weather2"></span>
+          </p>
+          <p class="row">
+            <span id="temp2"> </span>
+            <span id="humidity2"> </span>
+          </p>
+        </div>
+        
+        <div id="day3" class="container">
+          <p class="row">
+            <span id="date3"></span>
+            <img src="" alt="icon of current wearther condition" width="15%" id="icon3">
+            <span id="weather3"></span>
+          </p>
+          <p class="row">
+            <span id="temp3"> </span>
+            <span id="humidity3"> </span>
+          </p>
+        </div>
+        
+        <div id="day4" class="container">
+          <p class="row">
+            <span id="date4"></span>
+            <img src="" alt="icon of current wearther condition" width="15%" id="icon4">
+            <span id="weather4"></span>
+          </p>
+          <p class="row">
+            <span id="temp4"></span>
+            <span id="humidity4"></span>
+          </p>
+        </div>
+        
+        <div id="day5" class="container">
+          <p class="row">
+            <span id="date5"></span>
+            <img src="" alt="icon of current wearther condition" width="15%" id="icon5">
+            <span id="weather5"></span>
+          </p>
+          <p class="row">
+            <span id="temp5"> </span>
+            <span id="humidity5"> </span>
+          </p>
+        </div>
+        
+      </div>
+      
+      
+      
+    </content>
+    
 
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

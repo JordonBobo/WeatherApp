@@ -2,7 +2,72 @@
 
 
 
+body {
+  background-color: darkgray;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+#mainSearch {
+  background-color: orange;
+  color: black;
+  outline-color: burlywood;
+  border: none;
+}
+#mainSearch:hover {
+  background-color: tan;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+}
 
 
+.displays {
+  margin: auto;
+}
+
+
+/* UV indicator colors */
+.green{ background-color: green;}
+.yellow{ background-color: yellow;}
+.orange{ background-color: orange;}
+.red{ background-color: red;}
+
+
+
+
+
+#display1 {
+  position: relative;
+  margin: 2%;
+}
+#display1 div{
+  padding: 3%;
+  background-color: cornflowerblue;
+  border-radius: 8px;
+}
+#display1 div p{
+  margin-bottom: 0;
+}
+
+
+
+#display2 {
+  position: relative;
+  margin: 2%;
+}
+#display2 div{
+  background-color: green;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+#display2 div p{
+  margin-bottom:0;
+}
+
+#display2 div p img {
+  margin-top: -4%;
+}
 
 
