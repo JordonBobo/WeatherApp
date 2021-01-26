@@ -23,7 +23,7 @@ function openWeatherCurrent() {
         city = storedInfo;
     }
     console.log(city)
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=" + unitType + "&appid=" + apiKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=" + unitType + "&appid=" + apiKey;
     $.ajax({
         url: queryURL,
       method: "GET"
@@ -49,7 +49,7 @@ $("#mainSearch").click(openWeatherCurrent2);
 
 function openWeatherCurrent2() {
     var city = $("#userInput").val();
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=" + unitType + "&appid=" + apiKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=" + unitType + "&appid=" + apiKey;
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -60,7 +60,7 @@ function openWeatherCurrent2() {
         openWeatherWeek();
         $("#city").text(response.name);
         $("#date").text(localTime.c.month + "/" + localTime.c.day + "/" + localTime.c.year);
-        $("#icon").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
+        $("#icon").attr("src", "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
         $("#weather").text(response.weather[0].description);
         $("#temp").text("Temp: " + response.main.temp + "° " + tempUnit);
         $("#humidity").text("Humidity: " + response.main.humidity + "%");
@@ -88,7 +88,7 @@ function openWeatherWeek() {
             var mm = localTime.plus({days: i}).c.month;
             var yy = localTime.plus({days: i}).c.year;
             $("#date" + i).text(`${mm}/${dd}/${yy}`);
-            $("#icon" + i).attr("src", `http://openweathermap.org/img/wn/${response.daily[i].weather[0].icon}@2x.png`);
+            $("#icon" + i).attr("src", `https://openweathermap.org/img/wn/${response.daily[i].weather[0].icon}@2x.png`);
             $("#weather" + i).text( response.daily[i].weather[0].description);
             $("#temp" + i).text(`Temp: ${response.daily[i].temp.day}° ${tempUnit}/ `);
             $("#humidity" + i).text(`Humidity: ${response.daily[i].humidity}%`);
